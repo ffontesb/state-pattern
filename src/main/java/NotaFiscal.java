@@ -1,17 +1,17 @@
 
 public class NotaFiscal {
-	public int numero;
-	public Status status;
+	private int numero;
+	private Status status;
 	
 	public NotaFiscal(int numero){
 		this.numero = numero;
-		this.status = new StatusBranco();
-		processar();
+		setStatus(new StatusBranco());
 	}
 
 	
 	public void setStatus(Status status) {
 		this.status = status;
+		processar();
 	}
 	
 	@Override
