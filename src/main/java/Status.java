@@ -1,6 +1,6 @@
 
 public interface Status {
-	public void processar(NotaFiscal notaFiscal);
+	public void processaStatus(NotaFiscal notaFiscal);
 	public String toString();
 
 }

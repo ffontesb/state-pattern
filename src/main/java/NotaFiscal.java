@@ -6,6 +6,7 @@ public class NotaFiscal {
 	public NotaFiscal(int numero){
 		this.numero = numero;
 		this.status = new StatusBranco();
+		processar();
 	}
 
 	
@@ -17,6 +18,10 @@ public class NotaFiscal {
 	public String toString() {
 		// TODO Auto-generated method stub
 		return this.numero + "-" + this.status.toString() + "\n";
+	}
+	
+	public void processar(){
+		this.status.processaStatus(this);
 	}
 	
 }
