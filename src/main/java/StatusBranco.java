@@ -5,7 +5,8 @@ public class StatusBranco implements Status {
 	public void processaStatus(NotaFiscal notaFiscal) {
 		System.out.println("Recebeu a interface.");
 		notaFiscal.setStatus(this);
-		
+		notaFiscal.setStatus(new StatusFinalizado());
+		notaFiscal.processar();
 	}
 	
 	@Override

@@ -5,6 +5,9 @@ public class StatusCancelado implements Status {
 	public void processaStatus(NotaFiscal notaFiscal) {
 		System.out.println("Cancelou a nota");
 		notaFiscal.setStatus(this);
+		System.out.println(notaFiscal);
+		notaFiscal.setStatus(new StatusReativada());
+		notaFiscal.processar();
 	}
 	
 	@Override
